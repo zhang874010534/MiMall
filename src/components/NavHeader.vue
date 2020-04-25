@@ -19,7 +19,16 @@
       </div>
     </div>
     <!-- 中间导航 -->
-    <div class="nav-main"></div>
+    <div class="nav-main">
+      <div class="container">
+        <!-- 左边logo -->
+        <div class="logo"><a href="/#/login"></a></div>
+        <!-- 中间menu -->
+        <div class="menu"></div>
+        <!-- 右边搜索框 -->
+        <div class="search"></div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -37,6 +46,9 @@ export default {};
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
+      a {
+        margin-right: 15px;
+      }
       .cart {
         width: 110px;
         background-color: #ff6600;
@@ -45,9 +57,46 @@ export default {};
         .cart-icon {
           width: 16px;
           height: 12px;
-          background: url('../../public/imgs/icon-cart-checked.png') no-repeat;
+          background: url("../../public/imgs/icon-cart-checked.png") no-repeat;
           background-size: contain;
           margin-right: 5px;
+        }
+      }
+    }
+  }
+  .nav-main {
+    .container {
+      width: 1226px;
+      margin: 0 auto;
+      height: 112px;
+      .logo {
+        width: 55px;
+        height: 55px;
+        background: var(--themeColor);
+        overflow: hidden;
+        a {
+          width: 110px;
+          height: 55px;
+          transition: all 0.3s linear;
+          &::before {
+            content: "";
+            display: inline-block;
+            width: 55px;
+            height: 55px;
+            background: url("../../public/imgs/mi-logo.png") no-repeat;
+            background-size: contain;
+          }
+          &::after {
+            content: "";
+            display: inline-block;
+            width: 55px;
+            height: 55px;
+            background: url("../../public/imgs/mi-home.png") no-repeat;
+            background-size: contain;
+          }
+          &:hover {
+            margin-left: -55px;
+          }
         }
       }
     }

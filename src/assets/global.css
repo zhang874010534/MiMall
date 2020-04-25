@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 9;
+  --themeColor:#ff6600
 }
 a{
   display: inline-block;
