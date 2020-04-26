@@ -1,13 +1,8 @@
 *{
   margin: 0;
-  padding: 9;
+  padding: 0;
   --themeColor:#ff6600
 }
 a{
-  display: inline-block;
   text-decoration: none;
-  color: #b0b0b0;
-}
-span{
-  display: inline-block;
 }
