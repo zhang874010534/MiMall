@@ -9,6 +9,7 @@
           <a href="">MUI</a>
           <a href="">云服务</a>
           <a href="">协议规则</a>
+          <a href=""></a>
         </div>
         <!-- 右边的用户 -->
         <div class="user-info">
@@ -22,7 +23,9 @@
     <div class="nav-main">
       <div class="container">
         <!-- 左边logo -->
-        <div class="logo"><a href="/#/login"></a></div>
+        <div class="logo">
+          <a href="https://github.com/zhang874010534" target="_blank"></a>
+        </div>
         <!-- 中间menu -->
         <div class="menu">
           <div class="menu-item">
@@ -97,7 +100,25 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      
+    };
+  },
+  created() {
+    // this.getProductList();
+  },
+  methods: {
+    // async getProductList() {
+    //   let res = await this.axios.get("/products", {
+    //     params: {
+    //       categoryId: "100012"
+    //     }
+    //   });
+    // }
+  }
+};
 </script>
 <style lang="scss">
 @mixin beforeAfter($url) {
@@ -129,6 +150,7 @@ export default {};
       }
       .cart {
         width: 110px;
+        height: 39px;
         background-color: #ff6600;
         text-align: center;
         color: #fff;

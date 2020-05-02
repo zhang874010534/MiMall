@@ -8,7 +8,7 @@ import '../src/assets/global.css'
 
 Vue.config.productionTip = false;
 // webpack接口代理了'/api' 那么请求的时候甚至/api都不用写了直接写想要的接口
-axios.defaults.baseURL = '';
+axios.defaults.baseURL = '/api';
 // 超时时间
 axios.defaults.timeout = 8000;
 axios.interceptors.response.use((response) => {
