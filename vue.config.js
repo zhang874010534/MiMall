@@ -1,17 +1,23 @@
 module.exports = {
-  publicPath:'./',
-  devServer: {
-    proxy: {
-      "/api": {
-        // 这里肯定写的是生产环境下的请求地址
-        target: "https://mall-pre.springboot.cn",
-        changeOrigin: true,
-        pathRewrite: {
-          "/api": ""
+  devServer:{
+    host:'localhost',
+    port:8080,
+    proxy:{
+      '/api':{
+        target:'http://mall-pre.springboot.cn',
+        changeOrigin:true,
+        pathRewrite:{
+          '/api':''
         }
       }
     }
   },
-
-  lintOnSave: false
-};
+  // publicPath:'/app',
+  // outputDir:'dist',
+  // indexPath:'index2.html',
+  // lintOnSave:false,
+  productionSourceMap:true,
+  chainWebpack:(config)=>{
+    config.plugins.delete('prefetch');
+  }
+}
