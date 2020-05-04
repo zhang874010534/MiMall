@@ -225,6 +225,8 @@ export default {
             opacity: 0;
             border-top: 1px solid #e0e0e0;
             box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18);
+            z-index: 2;
+            background-color: #fff;
             .chidren-item {
               display: flex;
               flex-direction: column;
