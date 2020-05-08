@@ -25,21 +25,17 @@
         </div>
       </div>
     </div>
-    <div class="footer">
-      <div class="footer-link">
-        <a href="https://www.imooc.com/u/1343480" target="_blank">河畔一角主页</a><span>|</span>
-        <a href="https://coding.imooc.com/class/113.html" target="_blank">Vue全栈课程</a><span>|</span>
-        <a href="https://coding.imooc.com/class/236.html" target="_blank">React全家桶课程</a><span>|</span>
-        <a href="https://coding.imooc.com/class/343.html" target="_blank">微信支付专项课程（H5+小程序/云+Node+MongoDB）</a>
-      </div>
-      <p class="copyright">Copyright ©2019 mi.futurefe.com All Rights Reserved.</p>
-    </div>
+    <NavFooter/>
   </div>
 </template>
 <script>
 import { mapActions } from 'vuex';
+import NavFooter from '../components/NavFooter';
 export default {
   name: 'login',
+  components:{
+    NavFooter
+  },
   data(){
     return {
       username:'',

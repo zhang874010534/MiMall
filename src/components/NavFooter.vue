@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <div class="footerComponent">
     <div class="footer-logo">
       <img src="/imgs/logo-footer.png" alt="">
       <p>小米商城</p>
@@ -18,7 +18,7 @@
   }
 </script>
 <style lang="scss" scoped>
-  .footer{
+  .footerComponent{
     height:234px;
     border-top:4px solid #FF6600;
     background-color:#333333;
