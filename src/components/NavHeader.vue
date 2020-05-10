@@ -197,6 +197,30 @@ export default {
   background: url($img) no-repeat center;
   background-size: $size;
 }
+.header-logo {
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  background-color: #ff6600;
+  a {
+    display: inline-block;
+    width: 110px;
+    height: 55px;
+    &:before {
+      content: ' ';
+      @include bgImg(55px, 55px, '../assets/mi-logo.png', 55px);
+      transition: margin 0.2s;
+    }
+    &:after {
+      content: ' ';
+      @include bgImg(55px, 55px, '../assets/mi-home.png', 55px);
+    }
+    &:hover:before {
+      margin-left: -55px;
+      transition: margin 0.2s;
+    }
+  }
+}
 .header {
   .nav-topbar {
     height: 39px;
@@ -329,6 +353,7 @@ export default {
             width: 18px;
             height: 18px;
             background: url('../assets/icon-search.png') no-repeat center;
+            background-size: contain;
             margin-left: 17px;
           }
         }
