@@ -100,6 +100,10 @@
       </div>
     </div>
     <service-bar></service-bar>
+    <div class="video-box">
+      <div class="overlay"></div>
+      <video src="imgs/product/video.mp4" controls autoplay></video>
+    </div>
     <modal
       title="提示"
       sureText="查看购物车"
@@ -216,7 +220,100 @@ export default {
           img: 'imgs/ads/ads-4.jpg'
         }
       ],
-      phoneList: [[{"id":36,"categoryId":100012,"name":"Redmi Note 8 Pro","subtitle":"6400万全场景四摄","mainImage":"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/6f2493e6c6fe8e2485c407e5d75e3651.jpg","price":1399,"status":1,"imageHost":"http://img.springboot.cn"},{"id":37,"categoryId":100012,"name":"Redmi Note 8","subtitle":"千元4800万四摄","mainImage":"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/4c87947d104ee5833913e4c520108f16.jpg","price":999,"status":1,"imageHost":"http://img.springboot.cn"},{"id":38,"categoryId":100012,"name":"Redmi K20 Pro 尊享版","subtitle":"骁龙855 Plus， 弹出全面屏","mainImage":"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/8737a33c78a94bc36afb860ab23b3939.jpg","price":2699,"status":1,"imageHost":"http://img.springboot.cn"},{"id":39,"categoryId":100012,"name":"Redmi Note 7","subtitle":"4800万拍照千元机","mainImage":"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0ce61b71e2f81df62bd0c05aaa901d22.jpg","price":1099,"status":1,"imageHost":"http://img.springboot.cn"}],[{"id":40,"categoryId":100012,"name":"Redmi 7 ","subtitle":"4000mAh超长续航","mainImage":"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9aab8a7fa9005ef918c9aa2d5f17c806.jpg","price":699,"status":1,"imageHost":"http://img.springboot.cn"},{"id":41,"categoryId":100012,"name":"Redmi 7A","subtitle":"小巧大电量 持久流畅","mainImage":"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/3c1af9783bdc53ed843af5655ca92009.jpg","price":579,"status":1,"imageHost":"http://img.springboot.cn"},{"id":42,"categoryId":100012,"name":"小米CC9","subtitle":"3200万自拍，4800万三摄","mainImage":"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/bd25cc614a670f4d5546fe82e239ef86.jpg","price":1799,"status":1,"imageHost":"http://img.springboot.cn"},{"id":43,"categoryId":100012,"name":"小米9 Pro 5G","subtitle":"5G双卡全网通，骁龙855Plus","mainImage":"https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ca9b4f81af709935556bef9aa21a90e8.jpg","price":3699,"status":1,"imageHost":"http://img.springboot.cn"}]],
+      phoneList: [
+        [
+          {
+            id: 36,
+            categoryId: 100012,
+            name: 'Redmi Note 8 Pro',
+            subtitle: '6400万全场景四摄',
+            mainImage:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/6f2493e6c6fe8e2485c407e5d75e3651.jpg',
+            price: 1399,
+            status: 1,
+            imageHost: 'http://img.springboot.cn'
+          },
+          {
+            id: 37,
+            categoryId: 100012,
+            name: 'Redmi Note 8',
+            subtitle: '千元4800万四摄',
+            mainImage:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/4c87947d104ee5833913e4c520108f16.jpg',
+            price: 999,
+            status: 1,
+            imageHost: 'http://img.springboot.cn'
+          },
+          {
+            id: 38,
+            categoryId: 100012,
+            name: 'Redmi K20 Pro 尊享版',
+            subtitle: '骁龙855 Plus， 弹出全面屏',
+            mainImage:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/8737a33c78a94bc36afb860ab23b3939.jpg',
+            price: 2699,
+            status: 1,
+            imageHost: 'http://img.springboot.cn'
+          },
+          {
+            id: 39,
+            categoryId: 100012,
+            name: 'Redmi Note 7',
+            subtitle: '4800万拍照千元机',
+            mainImage:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/0ce61b71e2f81df62bd0c05aaa901d22.jpg',
+            price: 1099,
+            status: 1,
+            imageHost: 'http://img.springboot.cn'
+          }
+        ],
+        [
+          {
+            id: 40,
+            categoryId: 100012,
+            name: 'Redmi 7 ',
+            subtitle: '4000mAh超长续航',
+            mainImage:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9aab8a7fa9005ef918c9aa2d5f17c806.jpg',
+            price: 699,
+            status: 1,
+            imageHost: 'http://img.springboot.cn'
+          },
+          {
+            id: 41,
+            categoryId: 100012,
+            name: 'Redmi 7A',
+            subtitle: '小巧大电量 持久流畅',
+            mainImage:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/3c1af9783bdc53ed843af5655ca92009.jpg',
+            price: 579,
+            status: 1,
+            imageHost: 'http://img.springboot.cn'
+          },
+          {
+            id: 42,
+            categoryId: 100012,
+            name: '小米CC9',
+            subtitle: '3200万自拍，4800万三摄',
+            mainImage:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/bd25cc614a670f4d5546fe82e239ef86.jpg',
+            price: 1799,
+            status: 1,
+            imageHost: 'http://img.springboot.cn'
+          },
+          {
+            id: 43,
+            categoryId: 100012,
+            name: '小米9 Pro 5G',
+            subtitle: '5G双卡全网通，骁龙855Plus',
+            mainImage:
+              'https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ca9b4f81af709935556bef9aa21a90e8.jpg',
+            price: 3699,
+            status: 1,
+            imageHost: 'http://img.springboot.cn'
+          }
+        ]
+      ],
       showModal: false
     };
   },
@@ -436,6 +533,28 @@ export default {
           }
         }
       }
+    }
+  }
+  .video-box {
+    .overlay {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: black;
+      opacity: 0.4;
+      z-index: 10;
+    }
+    video {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      width: 1000px;
+      height: 536px;
+      z-index: 11;
+      object-fit: cover;
     }
   }
 }

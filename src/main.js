@@ -4,7 +4,7 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import VueLazyLoad from 'vue-lazyload'
 import VueCookie from 'vue-cookie'
-import { Message } from 'element-ui'
+import { Message } from 'element-ui' 
 import 'element-ui/lib/theme-chalk/index.css'
 import store from './store'
 import App from './App.vue'
@@ -25,13 +25,14 @@ axios.interceptors.response.use(function(response){
   let res = response.data;
   if(res.status == 0){
     return res.data;
-  }else if(res.status == 10){
-    window.location.href = '/#/login';
-    return Promise.reject(res);
   }else{
     Message.warning(res.msg);
     return Promise.reject(res);
   }
+  // else if(res.status == 10){
+  //   window.location.href = '/#/login';
+  //   return Promise.reject(res);
+  // }
 },(error)=>{
   let res = error.response;
   Message.error(res.data.message);

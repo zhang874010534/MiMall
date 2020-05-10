@@ -31,11 +31,13 @@
       initHeight(){
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
         this.isFixed = scrollTop > 152? true:false;
+        console.log(scrollTop)
       }
     },
     destroyed(){
-      window.removeEventListener('scroll',this.initHeight,false)
-    }
+      window.removeEventListener('scroll',this.initHeight)
+    },
+    
   }
 </script>
 <style lang="scss">
