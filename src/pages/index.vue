@@ -100,9 +100,13 @@
       </div>
     </div>
     <service-bar></service-bar>
-    <div class="video-box">
-      <div class="overlay"></div>
-      <video src="imgs/product/video.mp4" controls autoplay></video>
+    <button @click="videoFlag=true">video彩蛋</button>
+    <div class="video-box" >
+      <div class="overlay" v-if="videoFlag"></div>
+      <div class="video" :class="{'slide':videoFlag}">
+        <span @click="clodeVideo">x</span>
+        <video src="imgs/product/video.mp4" controls autoplay ref="videoDom"></video>
+      </div>
     </div>
     <modal
       title="提示"
@@ -314,7 +318,8 @@ export default {
           }
         ]
       ],
-      showModal: false
+      showModal: false,
+      videoFlag:false
     };
   },
   mounted() {
@@ -347,6 +352,10 @@ export default {
     },
     goToCart() {
       this.$router.push('/cart');
+    },
+    clodeVideo(){
+      this.videoFlag=false
+      this.$refs.videoDom.pause()
     }
   }
 };
@@ -546,15 +555,42 @@ export default {
       opacity: 0.4;
       z-index: 10;
     }
-    video {
+    .video {
       position: fixed;
       left: 50%;
-      top: 50%;
-      transform: translate(-50%,-50%);
+      top: -50%;
+      transform: translate(-50%, -50%);
       width: 1000px;
       height: 536px;
       z-index: 11;
-      object-fit: cover;
+      opacity: 0;
+      transition: all .4s;
+      &.slide{
+        top: 50%;
+        opacity: 1;
+      }
+      span {
+        display: inline-block;
+        font-size: 30px;
+        padding: 0 10px;
+        border-radius: 50%;
+        position: absolute;
+        top: 16px;
+        right: 42px;
+        z-index: 15;
+        color: #c8c8c8;
+        cursor: pointer;
+        &:hover {
+          background-color: #e53935;
+          color: white;
+        }
+      }
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        outline: none;
+      }
     }
   }
 }
