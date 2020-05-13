@@ -56,7 +56,7 @@
         </swiper>
       </div>
       <div class="ads-box">
-        <a
+        <a 
           v-bind:href="'/#/product/' + item.id"
           v-for="(item, index) in adsList"
           v-bind:key="index"
@@ -531,8 +531,8 @@ export default {
                 font-weight: bold;
                 cursor: pointer;
                 &:after {
-                  @include bgImg(22px, 22px, 'imgs/icon-cart-hover.png');
-                  background-image: 'imgs/icon-cart-hover.png';
+                  @include bgImg(22px, 22px, '../assets/icon-cart-hover.png');
+                  background-image: '../assets/icon-cart-hover.png';
                   content: ' ';
                   margin-left: 5px;
                   vertical-align: middle;

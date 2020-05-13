@@ -25,6 +25,7 @@ export default {
     getUser(){
       this.axios.get('/user').then((res={})=>{
         this.$store.dispatch('saveUserName',res.username);
+        console.log(2)
       })
     },
     getCartCount(){
