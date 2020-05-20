@@ -322,6 +322,8 @@ export default {
       videoFlag:false
     };
   },
+  created() {
+  },
   mounted() {
     // this.init();
   },

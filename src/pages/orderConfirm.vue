@@ -273,7 +273,7 @@ export default{
     },
     // 订单提交
     orderSubmit(){
-      let item = this.list[this.checkIndex];
+      let item = this.list[this.checkIndex]; 
       if(!item){
         this.$message.error('请选择一个收货地址');
         return;

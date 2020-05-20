@@ -61,10 +61,10 @@
       btnType="3"
       :showModal="showPayModal"
       sureText="查看订单"
-      cancelText="未支付"
+      cancelText="未支付" 
       @cancel="showPayModal=false"
       @submit="goOrderList"
-    >
+    > 
       <template v-slot:body>
         <p>您确认是否完成支付？</p>
       </template>
@@ -72,8 +72,10 @@
   </div>
 </template>
 <script>
+// 将微信二维码的链接转换成二维码
 import QRCode from 'qrcode'
 import OrderHeader from './../components/OrderHeader'
+// 支付弹框组件
 import ScanPayCode from './../components/ScanPayCode'
 import Modal from './../components/Modal'
 export default{
@@ -119,6 +121,7 @@ export default{
           amount:0.01,//单位元
           payType:2 //1支付宝，2微信
         }).then((res)=>{
+          
           QRCode.toDataURL(res.content)
           .then(url => {
             this.showPay = true;

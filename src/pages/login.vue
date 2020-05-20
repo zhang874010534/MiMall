@@ -84,7 +84,7 @@ export default {
     }
   }
   .wrapper{
-    background:url('/imgs/login-bg.jpg') no-repeat center;
+    background:url('../../public/imgs/login-bg.jpg') no-repeat center;
     .container{
       height:576px;
       .login-form{
