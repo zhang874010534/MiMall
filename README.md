@@ -1,24 +1,29 @@
-# mall
+#### 首页
 
-## Project setup
-```
-yarn install
-```
+![index](displayImgs/index.png)
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+![index2](displayImgs/index2.png)
 
-### Compiles and minifies for production
-```
-yarn build
-```
+#### 登录页
 
-### Lints and fixes files
-```
-yarn lint
-```
+![login](displayImgs/login.png)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+#### 订单列表
+
+![order](displayImgs/order.png)
+
+#### 订单确认
+
+![orderConfirm](displayImgs/orderConfirm.png)
+
+#### 订单支付
+
+![orderPlay](displayImgs/orderPlay.png)
+
+#### 购物车
+
+![shopCart](displayImgs/shopCart.png)
+
+#### 微信支付
+
+![wechat](displayImgs/wechat.png)

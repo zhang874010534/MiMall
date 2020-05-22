@@ -9,7 +9,7 @@
               <div class="children">
                 <ul v-for="(item, i) in menuList" v-bind:key="i">
                   <li v-for="(sub, j) in item" v-bind:key="j">
-                    <a v-bind:href="sub ? '/#/product/' + sub.id : ''">
+                    <a v-bind:href="sub ? '#/product/' + sub.id : ''">
                       <img
                         v-bind:src="sub ? sub.img : 'imgs/item-box-1.png'"
                         alt=""
@@ -45,7 +45,7 @@
         </div>
         <swiper v-bind:options="swiperOption">
           <swiper-slide v-for="(item, index) in slideList" v-bind:key="index">
-            <a v-bind:href="'/#/product/' + item.id"
+            <a v-bind:href="'#/product/' + item.id"
               ><img v-bind:src="item.img"
             /></a>
           </swiper-slide>
@@ -75,7 +75,7 @@
         <h2>手机</h2>
         <div class="wrapper">
           <div class="banner-left">
-            <a href="/#/product/35"
+            <a href="#/product/35"
               ><img v-lazy="'imgs/mix-alpha.jpg'" alt=""
             /></a>
           </div>
@@ -326,6 +326,7 @@ export default {
   },
   mounted() {
     // this.init();
+    Object.defineProperty
   },
   methods: {
     // init() {
