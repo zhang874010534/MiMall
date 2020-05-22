@@ -655,30 +655,30 @@ export default {
     getOrderList() {
       this.loading = true;
       this.busy = true;
-      // this.axios
-      //   .get('/orders', {
-      //     params: {
-      //       pageSize: 10,
-      //       pageNum: this.pageNum
-      //     }
-      //   })
-      //   .then((res) => {
-      //     this.fackRes = res;
-      //     this.loading = false;
-      //     this.list = this.list.concat(res.list);
-      //     this.total = res.total;
-      //     this.showNextPage = res.hasNextPage;
-      //     this.busy = false;
-      //   })
-      //   .catch(() => {
-      //     this.loading = false;
-      //   });
-      let res=this.fackRes
-      this.loading = false;
-      this.list = this.list.concat(res.list);
-      this.total = res.total;
-      this.showNextPage = res.hasNextPage;
-      this.busy = false;
+      this.axios
+        .get('/orders', {
+          params: {
+            pageSize: 10,
+            pageNum: this.pageNum
+          }
+        })
+        .then((res) => {
+          this.fackRes = res;
+          this.loading = false;
+          this.list = this.list.concat(res.list);
+          this.total = res.total;
+          this.showNextPage = res.hasNextPage;
+          this.busy = false;
+        })
+        .catch(() => {
+          this.loading = false;
+        });
+      // let res=this.fackRes
+      // this.loading = false;
+      // this.list = this.list.concat(res.list);
+      // this.total = res.total;
+      // this.showNextPage = res.hasNextPage;
+      // this.busy = false;
     },
     goPay(orderNo) {
       // 三种路由跳转方式
